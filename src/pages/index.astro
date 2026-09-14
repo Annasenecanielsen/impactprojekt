@@ -2,23 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
 import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+import food from "../images/food.webp";
 ---
-
 <Layout>
   <Menu />
-  <main>
-    <section class="hero">
-      <img
-        class="hero-billede"
-        src="/images/hero.jpg"
-        alt="Impact Festival"
-      />
-      <img
-        class="hero-logo"
-        src="/images/impact-logo.png"
-        alt="Impact Festival logo"
-      />
-    </section>
+<main>
+  <section class="hero">
+  <Image
+    src={food}
+    alt="Impact Festival"
+    class="hero-billede"
+  />
+</section>
     <section class="intro">
       <a class="knap" href="/program">
         PROGRAM →
@@ -29,11 +25,8 @@ import Footer from "../components/Footer.astro";
         Sydhavnen, where impact is<br />
         experienced in practice.
       </p>
-
     </section>
-
     <section class="find-os">
-
       <div class="find-os-tekst">
         <span>F</span>
         <span>I</span>
@@ -55,5 +48,5 @@ import Footer from "../components/Footer.astro";
       </a>
     </section>
   </main>
-  <Footer />
-</Layout>
+    <Footer />
+  </Layout>
