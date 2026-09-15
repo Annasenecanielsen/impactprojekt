@@ -1,21 +1,19 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import { Image } from "astro:assets";
+import logo from "../images/logo.webp";
 ---
-	<main>
-	
-	</main>
-<style>
-</style>
 <header class="menu">
-  <a href="/" class="logo">
-    <img src="/images/impact-logo.png" alt="Impact Festival" />
+  <a href="/" class="logo-link">
+    <Image
+      src={logo}
+      alt="Impact Festival logo"
+      class="menu-logo"
+    />
   </a>
-
   <nav>
-    <a href="#about">About</a>
-    <a href="../Program>Program</a>
-    <a href="#tickets">Tickets</a>
-    <a href="#newsletter">Newsletter</a>
+    <a href="#">About</a>
+ <a href="/program">Program</a>
+    <a href="#">Tickets</a>
+    <a href="#">Newsletter</a>
   </nav>
 </header>

@@ -1,12 +1,64 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Footer from '../components/Footer.astro';
-import Menu from '../components/Menu.astro'
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
+
+import programHero from "../images/program.webp";
+import music from "../images/music.webp";
+import talks from "../images/talks.webp";
+import workshops from "../images/workshops.webp";
+import food from "../images/foodto.webp";
+import logo from "../images/logo.webp";
 ---
 <Layout>
-<Menu />
-<Footer />
+  <Menu />
+  <main class="program-page">
+    <section class="program-hero">
+      <h1>PROGRAM</h1>
+      <Image src={programHero} alt="Impact Festival" class="program-hero-image"/>
+    </section>
+    <section class="program-date">
+      <p>AT SYDHAVN</p>
+      <p>
+        FRIDAY 11TH - SATURDAY 12TH SEP
+      </p>
+      <p>2026</p>
+    </section>
+    <div class="program-line"></div>
+    <section class="program-grid">
+      <a href="#" class="program-card">
+        <Image src={music} alt="Music"/>
+        <span>MUSIC</span>
+      </a>
+      <a href="#" class="program-card">
+        <Image src={talks} alt="Talks"/>
+        <span>TALKS</span>
+      </a>
+      <a href="#" class="program-card">
+        <Image src={workshops} alt="Workshops"
+        />
+        <span>WORK<br />SHOPS</span>
+      </a>
+      <a href="#" class="program-card">
+        <Image src={food} alt="Food" />
+        <span>FOOD</span>
+      </a>
+    </section>
+    <section class="ticket-section">
+      <a
+        href="#"
+        class="ticket-button" >
+        GET YOUR TICKET <span>→</span>
+      </a>
+    </section>
+    <div class="program-line"></div>
+    <section class="program-logo">
+      <Image
+        src={logo}
+        alt="Impact Festival"
+      />
+    </section>
+  </main>
+  <Footer />
 </Layout>
-<section>
-    <h1>Program</h1>
-</section>

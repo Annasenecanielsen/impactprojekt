@@ -1,133 +1,317 @@
-html,
-body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #f2efe9;
-}
 .menu {
   width: 100%;
-  max-width: 1260px;
-  margin: 20px auto;
+  max-width: 1160px;
+  height: 75px;
+  margin: 10px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
 }
-.logo img {
-  width: 160px;
+.menu .logo {
+  width: 165px;
+  height: auto;
   display: block;
 }
 .menu nav {
   display: flex;
   align-items: center;
-  gap: 55px;
+  gap: 45px;
 }
 .menu nav a {
-  text-decoration: none;
   color: #747b50;
-  font-size: 25px;
+  text-decoration: none;
+  font-size: 28px;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 .menu nav a:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
-/* ---------- FORSIDE ---------- */
-
-body {
-  margin: 0;
+.logo-link {
+  width: 165px;
+  display: block;
 }
-
-/* HERO */
-
+.logo-link img {
+  width: 165px;
+  height: auto;
+  display: block;
+}
 .hero {
   position: relative;
   width: 100%;
 }
-
 .hero-billede {
   width: 100%;
-  height: 320px;
+  height: 620px;
   object-fit: cover;
+  object-position: center 64%;
   display: block;
+  filter: brightness(60%);
 }
-
 .hero-logo {
   position: absolute;
-
   width: 230px;
-
+  height: auto;
   top: 50%;
   left: 50%;
-
   transform: translate(-50%, -50%);
 }
-
-/* PROGRAM + INTRO TEKST */
-
 .intro {
   text-align: center;
-  padding: 30px 20px 55px;
+  padding: 55px 20px 95px;
 }
-
 .knap {
-  display: inline-block;
-
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 38px;
   border: 1px solid red;
-  border-radius: 30px;
-
-  padding: 10px 22px;
-
+  border-radius: 40px;
   color: red;
   text-decoration: none;
-
-  font-size: 14px;
-  letter-spacing: 3px;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: 4px;
 }
-
-.intro p {
-  margin-top: 35px;
-
+.intro-tekst {
+  margin-top: 55px;
   color: red;
-
-  font-size: 15px;
-  line-height: 1.4;
+  font-size: 20px;
+  line-height: 1.6;
   letter-spacing: 1px;
 }
-
-/* FIND OS */
-
 .find-os {
   display: flex;
+  align-items: stretch;
   width: 100%;
 }
-
 .find-os-tekst {
-  width: 65px;
-
+  width: 95px;
   display: flex;
-  flex-direction: column;
-
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-
   color: red;
-
-  font-size: 30px;
+  font-size: 34px;
   font-weight: bold;
+  letter-spacing: 10px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.kort {
+  width: 100%;
+  height: 575px;
+  object-fit: cover;
+  display: block;
+}
+.trifolium {
+  text-align: center;
+  padding: 70px 20px 100px;
+}
+.bund-logo {
+  text-align: center;
+  padding: 0 25px 60px;
+}
+.bund-logo img {
+  width: 410px;
+  max-width: 85%;
+  height: auto;
+}
+.footer {
+  padding: 40px 55px 70px;
+  background-color: white;
+  color: black;
+}
+.footer h2 {
+  margin: 15px;
+  color: #747b50;
+  font-size: 25px;
+  font-weight: 700;
+}
+.footer p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.45;
+}
+.footer-location {
+  margin-bottom: 55px;
+}
+.footer-contact {
+  margin-bottom: 30px;
+}
+.program-page {
+  width: 100%;
+  background-color: white;
 }
 
-.kort {
-  width: calc(100% - 65px);
-  height: 240px;
+/* HERO */
+
+.program-hero {
+  position: relative;
+
+  width: 100%;
+  height: 270px;
+
+  margin-top: 20px;
+}
+
+.program-hero-image {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 55%;
+  height: 100%;
 
   object-fit: cover;
   display: block;
 }
 
-/* TRIFOLIUM */
+.program-hero h1 {
+  position: absolute;
 
-.trifolium {
+  left: -10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  margin: 0;
+
+  color: red;
+
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1;
+
+  z-index: 2;
+}
+
+/* DATO */
+
+.program-date {
   text-align: center;
-  padding: 38px 20px;
+
+  padding: 70px 15px 60px;
+
+  color: red;
+}
+
+.program-date p {
+  margin: 0 0 25px;
+
+  font-size: 22px;
+  font-weight: 600;
+
+  letter-spacing: 7px;
+}
+
+.program-date p:last-child {
+  margin-bottom: 0;
+}
+
+/* STREG */
+
+.program-line {
+  width: calc(100% - 40px);
+  height: 1px;
+
+  margin: 0 auto;
+
+  background-color: #8a8f69;
+}
+
+/* PROGRAM GRID */
+
+.program-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 26px 30px;
+
+  padding: 62px 22px;
+}
+
+.program-card {
+  position: relative;
+
+  display: block;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  text-decoration: none;
+}
+
+.program-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.program-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.program-card span {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 600;
+  font-style: italic;
+
+  letter-spacing: 2px;
+
+  text-align: center;
+}
+
+.ticket-section {
+  text-align: center;
+
+  padding: 0 20px 55px;
+}
+
+.ticket-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 38px;
+  border: 1px solid red;
+  border-radius: 40px;
+  color: red;
+  text-decoration: none;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: 4px;
+}
+.ticket-button span {
+  font-size: 22px;
+}
+.program-logo {
+  padding: 60px 45px 50px;
+  text-align: center;
+}
+.program-logo img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
 }

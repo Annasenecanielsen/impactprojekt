@@ -3,50 +3,45 @@ import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
-import food from "../images/food.webp";
+import food from "../images/food..webp";
+import logo from "../images/logo.webp";
+import map from "../images/map.webp";
 ---
 <Layout>
   <Menu />
-<main>
-  <section class="hero">
-  <Image
-    src={food}
-    alt="Impact Festival"
-    class="hero-billede"
-  />
-</section>
-    <section class="intro">
-      <a class="knap" href="/program">
-        PROGRAM →
-      </a>
-      <p>
-        IMPACT FESTIVAL is rooted in<br />
-        Trifolium’s existing community in<br />
-        Sydhavnen, where impact is<br />
-        experienced in practice.
-      </p>
-    </section>
-    <section class="find-os">
-      <div class="find-os-tekst">
-        <span>F</span>
-        <span>I</span>
-        <span>N</span>
-        <span>D</span>
-		<span> </span>
-        <span>O</span>
-        <span>S</span>
-      </div>
-      <img
-        class="kort"
-        src="/images/kort.jpg"
-        alt="Kort over Trifolium"
+  <main>
+    <section class="hero">
+      <Image src={food} alt="Impact Festival" class="hero-billede"
+      />
+     <Image src={logo} alt="Impact Festival logo" class="hero-logo"
       />
     </section>
-    <section class="trifolium">
-      <a class="knap" href="#">
-        TRIFOLIUM →
-      </a>
-    </section>
+<section class="intro">
+  <a class="knap" href="/program">
+  PROGRAM →
+</a>
+  <p class="intro-tekst">
+    IMPACT FESTIVAL is rooted in<br /> Trifolium’s existing community in<br />  Sydhavnen, where impact is<br /> experienced in practice. </p>
+</section>
+<section class="find-os">
+  <div class="find-os-tekst">
+    FIND OS
+  </div>
+  <Image src={map} alt="Kort over Trifolium" class="kort"/>
+</section>
+<section class="trifolium">
+<a
+  class="knap"
+  href="https://trifo.dk/pages/kontorerogvaerkstedsfaelleskab"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  TRIFOLIUM →
+</a>
+</section>
+<section class="bund-logo">
+  <Image src={logo} alt="Impact Festival"/>
+</section>
   </main>
-    <Footer />
-  </Layout>
+<Footer />
+</Layout>
