@@ -28,6 +28,91 @@
 .menu nav a:hover {
   opacity: 0.6;
 }
+.burger {
+  display: none;
+}
+@media (max-width: 700px) {
+  .menu {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    margin: 0;
+    padding: 0 20px;
+    z-index: 1000;
+  }
+  .logo-link {
+    width: 125px;
+    z-index: 1001;
+  }
+  .menu .logo {
+    width: 125px;
+    height: auto;
+  }
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .burger span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #747b50;
+    transition: 0.3s;
+  }
+  .menu .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 25px;
+    padding: 35px 20px;
+    background-color: white;
+    box-sizing: border-box;
+  }
+  .menu .nav.active {
+    display: flex;
+  }
+  .menu .nav a {
+    font-size: 25px;
+    color: #747b50;
+    text-align: center;
+  }
+}
+/* menu css slut */
+.footer {
+  padding: 40px 55px 70px;
+  background-color: white;
+  color: black;
+}
+.footer h2 {
+  margin: 15px;
+  color: #747b50;
+  font-size: 25px;
+  font-weight: 700;
+}
+.footer p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.45;
+}
+.footer-location {
+  margin-bottom: 55px;
+}
+.footer-contact {
+  margin-bottom: 30px;
+}
+/* footer css slut */
 .logo-link {
   width: 165px;
   display: block;
@@ -117,179 +202,99 @@
   max-width: 85%;
   height: auto;
 }
-.footer {
-  padding: 40px 55px 70px;
-  background-color: white;
-  color: black;
-}
-.footer h2 {
-  margin: 15px;
-  color: #747b50;
-  font-size: 25px;
-  font-weight: 700;
-}
-.footer p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.45;
-}
-.footer-location {
-  margin-bottom: 55px;
-}
-.footer-contact {
-  margin-bottom: 30px;
-}
+/* index css slut */
+
 .program-page {
   width: 100%;
   background-color: white;
 }
-
-/* HERO */
-
 .program-hero {
   position: relative;
-
   width: 100%;
-  height: 270px;
-
+  height: 390px;
   margin-top: 20px;
 }
-
 .program-hero-image {
   position: absolute;
-
   right: 0;
   top: 0;
-
   width: 55%;
   height: 100%;
-
   object-fit: cover;
   display: block;
 }
-
 .program-hero h1 {
   position: absolute;
-
-  left: -10px;
   top: 50%;
-
-  transform: translateY(-50%);
-
   margin: 0;
-
   color: red;
-
   font-size: 70px;
   font-weight: 700;
   line-height: 1;
-
   z-index: 2;
 }
-
-/* DATO */
-
 .program-date {
   text-align: center;
-
   padding: 70px 15px 60px;
-
   color: red;
 }
-
 .program-date p {
   margin: 0 0 25px;
-
   font-size: 22px;
   font-weight: 600;
-
   letter-spacing: 7px;
 }
-
 .program-date p:last-child {
   margin-bottom: 0;
 }
-
-/* STREG */
-
 .program-line {
   width: calc(100% - 40px);
   height: 1px;
-
   margin: 0 auto;
-
   background-color: #8a8f69;
 }
-
-/* PROGRAM GRID */
-
 .program-grid {
   display: grid;
-
   grid-template-columns: repeat(2, 1fr);
-
   gap: 26px 30px;
-
   padding: 62px 22px;
 }
-
 .program-card {
   position: relative;
-
   display: block;
-
   aspect-ratio: 1 / 1;
-
   overflow: hidden;
-
   text-decoration: none;
 }
-
 .program-card img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
-
 .program-card::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background-color: rgba(0, 0, 0, 0.08);
 }
-
 .program-card span {
   position: absolute;
-
   left: 50%;
   top: 50%;
-
   transform: translate(-50%, -50%);
-
   z-index: 2;
-
   color: white;
-
   font-size: 25px;
   font-weight: 600;
   font-style: italic;
-
   letter-spacing: 2px;
-
   text-align: center;
 }
-
 .ticket-section {
   text-align: center;
-
   padding: 0 20px 55px;
 }
-
 .ticket-button {
   display: inline-flex;
   align-items: center;
@@ -315,3 +320,4 @@
   max-width: 420px;
   height: auto;
 }
+/* program css slut */

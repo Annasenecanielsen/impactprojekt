@@ -7,13 +7,26 @@ import logo from "../images/logo.webp";
     <Image
       src={logo}
       alt="Impact Festival logo"
-      class="menu-logo"
+      class="logo"
     />
   </a>
-  <nav>
-    <a href="#">About</a>
- <a href="/program">Program</a>
-    <a href="#">Tickets</a>
-    <a href="#">Newsletter</a>
+  <button class="burger" aria-label="Åbn menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav">
+    <a href="/">About</a>
+    <a href="/program">Program</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#newsletter">Newsletter</a>
   </nav>
 </header>
+<script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav");
+  burger?.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav?.classList.toggle("active");
+  });
+</script>
